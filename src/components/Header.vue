@@ -17,6 +17,11 @@
             </button>
         </div>
     </header>
+    <div class="last-seen">
+        <span>
+            Hoje 11:30
+        </span>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -63,5 +68,19 @@
             }
         }
     }
+    .last-seen {
+        width: 100%;
+        padding: 1.625rem 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+            span {
+                font-family: Roboto, sans-serif;
+                font-size: 0.75rem;
+                color: var(--light-text);
+            }
+
+        }
+ 
 </style>
