@@ -6,6 +6,7 @@ import Header from './Header.vue';
 <template>
     <main>
         <Header />
+        <slot />
     </main>
 </template>
 
