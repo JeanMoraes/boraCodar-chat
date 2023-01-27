@@ -17,18 +17,6 @@
             message="Sério? Me conta mais."
             direction="sent"
        />
-       <ChatMessage
-            person="Cecília"
-            time="15:35"
-            message="Tive uma ideia incrível para um projeto! 😍"
-            direction="received"
-       />
-       <ChatMessage
-            person="Cecília"
-            time="15:35"
-            message="Tive uma ideia incrível para um projeto! 😍"
-            direction="received"
-       />
     </div>
 </template>
 
