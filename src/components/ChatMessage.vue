@@ -44,6 +44,11 @@
 
             color: var(--light-text);
             text-align: left;
+
+            @media screen and (min-width: 720px) {
+                width: auto;
+                max-width: 50%;
+            }
         }
 
     }
