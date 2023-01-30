@@ -25,6 +25,7 @@
         height: 100%;
         margin: 1rem 0 0 0;
         display: flex;
+        flex: 1;
         flex-direction: column;
         gap: 0.5rem;
         overflow-y: scroll;
