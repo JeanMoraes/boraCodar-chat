@@ -34,10 +34,26 @@ import ChatMessage, {ChatMessageProps} from './ChatMessage.vue';
         width: 100%;
         height: 100%;
         margin: 1rem 0 0 0;
+        padding-right: 1rem;
         display: flex;
         flex: 1;
         flex-direction: column;
         gap: 0.5rem;
-        overflow-y: scroll;
+        overflow-y: auto;
+
+        /* ===== Scrollbar ===== */
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--light-text);
+            opacity: 0.2;
+            border-radius: 0px;
+        }
     }
 </style>

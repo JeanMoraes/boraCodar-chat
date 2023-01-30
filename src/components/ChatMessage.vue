@@ -37,7 +37,7 @@
         .message-box {
             display: flex;
             align-items: flex-start;
-            width: 50%;
+            width: 75%;
             
             background-color: var(--primary); 
             padding: 0.875rem;
@@ -47,7 +47,7 @@
 
             @media screen and (min-width: 720px) {
                 width: auto;
-                max-width: 50%;
+                max-width: 75%;
             }
         }
 
