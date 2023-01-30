@@ -11,7 +11,6 @@ import ChatMessage, {ChatMessageProps} from './ChatMessage.vue';
             contentEl.scrollTop = contentEl.scrollHeight;
         }
         
-        console.log('update...', contentEl)
     })
 
 </script>
