@@ -38,7 +38,7 @@
     const date2 = new Date()
     
     const newMessage: ChatMessageProps = {
-      person: 'Você',
+      person: 'Cecília',
       time: `${date2.getHours().toLocaleString()}: ${date2.getMinutes().toLocaleString()}`,
       message: chooseRandomResponse(),
       direction: 'received'
