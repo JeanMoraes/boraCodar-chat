@@ -51,9 +51,16 @@ const generateRandomResponse = () => {
     )
   }
 
+//   ---------------------------------
+
+const resetChat = () => {
+    messages.value.length = 1
+}
+
   return {
     messages,
     commitMessage,
+    resetChat,
   }
 
 }

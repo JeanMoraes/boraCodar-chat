@@ -1,5 +1,15 @@
 <script setup lang="ts">
     import closeIcon from '../assets/icons/close-icon.svg'
+
+    const emit = defineEmits({
+        resetChat() {
+            return true
+        }
+    })
+
+    function handleResetChat() {
+        emit('resetChat')
+    }
 </script>
 
 <template>
@@ -13,8 +23,8 @@
                 <span>Online</span>
             </div>
             <div class="close-button">
-                <button type="button">
-                    <img :src="closeIcon" alt="Botão de fechar"/>
+                <button type="button" @click="handleResetChat()">
+                    <img :src="closeIcon" alt="Resetar chat"/>
                 </button>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import useChat from './components/useChat'
-  
+
   import ChatContainer from './components/ChatContainer.vue'
   import Header from './components/Header.vue';
   import ChatContent from './components/ChatContent.vue';
@@ -8,14 +8,15 @@
 
   const {
     messages,
-    commitMessage
+    commitMessage,
+    resetChat
   } = useChat()
 
 </script>
 
 <template>
     <ChatContainer>
-      <Header />
+      <Header @resetChat="resetChat()" />
       <ChatContent :messages="messages"/>
       <ChatInputMessage @send="commitMessage" />
     </ChatContainer>
