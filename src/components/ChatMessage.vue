@@ -27,6 +27,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
+        animation: appear 0.25s ease;
         .name-time {
             font-family: Roboto, sans-serif;
             font-size: 0.75rem;
@@ -63,4 +64,19 @@
             justify-content: flex-start;
         }
     }
+
+    @keyframes appear {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-45px);
+	}
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+    
 </style>
