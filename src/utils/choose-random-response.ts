@@ -12,7 +12,7 @@ const responses: string[] = [
 ]
 
 export default function chooseRandomResponse() {
-    const index = Math.round(Math.random() * responses.length)
+    const index = Math.round(Math.random() * (responses.length - 1))
     console.log({index})
     return responses[index]
 }
