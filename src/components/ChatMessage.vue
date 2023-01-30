@@ -1,11 +1,13 @@
 <script setup lang="ts">
 
-defineProps<{
-    person: String,
-    time: String,
-    message: String,
-    direction: "received" | "sent"
-}>()
+    export type ChatMessageProps = {
+        person: string,
+        time: string,
+        message: string,
+        direction: "received" | "sent"
+    }
+
+    defineProps<ChatMessageProps>()
 
 </script>
 
@@ -34,7 +36,6 @@ defineProps<{
         .message-box {
             display: flex;
             align-items: flex-start;
-            justify-content: center;
             width: 50%;
             
             background-color: var(--primary); 
@@ -59,6 +60,7 @@ defineProps<{
         .message-box {
             background-color: var(--primary);
             border-radius: 0 8px 8px 8px;
+            justify-content: flex-start;
         }
     }
 </style>

@@ -1,14 +1,39 @@
 <script setup lang="ts">
+    import { ref } from "vue";
     import sendIcon from "../assets/icons/send-icon.svg"
+
+    const inputMessage = ref('')
+
+    const emit = defineEmits({
+        send(payload: string) {
+            return payload
+        }
+    })
+
+    function sendMessage(e: Event) {
+        e.preventDefault()
+        if(!inputMessage.value) return 
+        
+        emit('send', inputMessage.value)
+        inputMessage.value = ''
+    }
+    
 </script>
 
 <template>
-    <div class="input-group">
-        <input type="text" placeholder="Digite sua mensagem" />
-        <button>
-            <img :src="sendIcon" alt="Enviar mensagem" />
-        </button>
-    </div>
+    <form @submit="sendMessage">
+        <div class="input-group">
+            <input
+                type="text"
+                name="message"
+                placeholder="Digite sua mensagem"
+                v-model="inputMessage"
+            />
+            <button type="submit">
+                <img :src="sendIcon" alt="Enviar mensagem" />
+            </button>
+        </div>
+    </form>
 </template>
 
 <style lang="scss" scoped>
